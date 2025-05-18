@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PARLAY ASLAB FDM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 60%;
+            background-color: #fff;
+        }
+        th, td {
+            padding: 15px;
+            border: 1px solid #ccc;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        .odds-button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>PARLAY ASLAB FDM</h1>
+    <table>
+        <tr>
+            <th>Nama Aslab</th>
+            <th>Odds (klik untuk ubah)</th>
+        </tr>
+        <tr><td>TONGTONG</td><td><button class="odds-button" onclick="changeOdds(this)">1.80</button></td></tr>
+        <tr><td>NIZAR</td><td><button class="odds-button" onclick="changeOdds(this)">2.05</button></td></tr>
+        <tr><td>AMIRUL</td><td><button class="odds-button" onclick="changeOdds(this)">1.95</button></td></tr>
+        <tr><td>BEJO</td><td><button class="odds-button" onclick="changeOdds(this)">3.20</button></td></tr>
+        <tr><td>JARIP</td><td><button class="odds-button" onclick="changeOdds(this)">2.75</button></td></tr>
+        <tr><td>JOSHUA</td><td><button class="odds-button" onclick="changeOdds(this)">1.60</button></td></tr>
+        <tr><td>WAHYU</td><td><button class="odds-button" onclick="changeOdds(this)">2.30</button></td></tr>
+        <tr><td>WISNU BATU</td><td><button class="odds-button" onclick="changeOdds(this)">2.90</button></td></tr>
+        <tr><td>ANWAR</td><td><button class="odds-button" onclick="changeOdds(this)">3.10</button></td></tr>
+        <tr><td>ROBBY</td><td><button class="odds-button" onclick="changeOdds(this)">2.20</button></td></tr>
+    </table>
+
+    <script>
+        function changeOdds(button) {
+            let min = 1.50;
+            let max = 4.00;
+            let newOdds = (Math.random() * (max - min) + min).toFixed(2);
+            button.textContent = newOdds;
+        }
+    </script>
+</body>
+</html>
